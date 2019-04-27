@@ -13,49 +13,41 @@
       </tr>
       <tr>
         <th scope="row">
-          <label for="ghToken"><?php echo __('Personl Access Token', 'static-html-output-plugin');?></label>
+          <label for="bbToken"><?php echo __('Personl Access Token', 'static-html-output-plugin');?></label>
         </th>
         <td>
-          <?php $tpl->displayTextfield($this, 'ghToken', 'Bitbucket Personal Access Token', '<a href="https://bitbucket.com/settings/tokens/new" target="_blank">How do I get this?</a>', 'password'); ?>
+          <?php $tpl->displayTextfield($this, 'bbToken', 'Bitbucket Personal Access Token', '<a href="https://bitbucket.com/settings/tokens/new" target="_blank">How do I get this?</a>', 'password'); ?>
         </td>
       </tr>
       <tr>
         <th scope="row">
-          <label for="ghRepo"><?php echo __('Account & Repository Name', 'static-html-output-plugin');?></label>
+          <label for="bbRepo"><?php echo __('Account & Repository Name', 'static-html-output-plugin');?></label>
         </th>
         <td>
-          <?php $tpl->displayTextfield($this, 'ghRepo', 'Account / Repository Name', 'ie, leonstafford/wp2static'); ?><br>
+          <?php $tpl->displayTextfield($this, 'bbRepo', 'Account / Repository Name', 'ie, leonstafford/wordpress-static-html-plugin'); ?><br>
 
+          <p><i>Repository cannot be empty, just create any file via the Bitbucket UI if needed</i></p>
         </td>
       </tr>
       <tr>
         <th scope="row">
-          <label for="ghBranch"><?php echo __('Branch', 'static-html-output-plugin');?></label>
+          <label for="bbBranch"><?php echo __('Branch', 'static-html-output-plugin');?></label>
         </th>
         <td>
-          <?php $tpl->displayTextfield($this, 'ghBranch', 'Branch', 'usually \'master\' or \'gh-pages\''); ?>
+          <?php $tpl->displayTextfield($this, 'bbBranch', 'Branch', 'usually \'master\' or \'bb-pages\''); ?>
         </td>
       </tr>
       <tr>
         <th scope="row">
-          <label for="ghPath"><?php echo __('Subdirectory', 'static-html-output-plugin');?></label>
+          <label for="bbPath"><?php echo __('Subdirectory', 'static-html-output-plugin');?></label>
         </th>
         <td>
-          <?php $tpl->displayTextfield($this, 'ghPath', 'Path within repository', 'Usually the repository root (leave this blank) or the \'doc\' folder'); ?>
+          <?php $tpl->displayTextfield($this, 'bbPath', 'Path within repository', 'Usually the repository root (leave this blank) or the \'doc\' folder'); ?>
         </td>
       </tr>
       <tr>
         <th scope="row">
-          <label for="ghCommitMessage"><?php echo __('Commit message', 'static-html-output-plugin');?></label>
-        </th>
-        <td>
-          <?php $tpl->displayTextfield($this, 'ghCommitMessage', 'WP2Static %ACTION% %FILENAME%', 'Anything you like, with special vars %ACTION% and %FILENAME% available'); ?>
-
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <label for="gh_test"><?php echo __('Test Bitbucket Settings', 'static-html-output-plugin');?></label>
+          <label for="bb_test"><?php echo __('Test Bitbucket Settings', 'static-html-output-plugin');?></label>
         </th>
         <td>
           <button id="bitbucket-test-button" type="button" class="btn-primary button">Test Bitbucket Settings</button>
