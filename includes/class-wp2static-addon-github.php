@@ -48,11 +48,10 @@ class Wp2static_Addon_Bitbucket {
     public function add_deployment_option_keys( $keys ) {
         $new_keys = array(
             'baseUrl-bitbucket',
-            'ghBranch',
-            'ghPath',
-            'ghToken',
-            'ghRepo',
-            'ghCommitMessage',
+            'bbBranch',
+            'bbPath',
+            'bbRepo',
+            'bbToken',
         );
 
         $keys = array_merge(
@@ -66,10 +65,9 @@ class Wp2static_Addon_Bitbucket {
     public function whitelist_deployment_option_keys( $keys ) {
         $whitelist_keys = array(
             'baseUrl-bitbucket',
-            'ghBranch',
-            'ghPath',
-            'ghRepo',
-            'ghCommitMessage',
+            'bbBranch',
+            'bbPath',
+            'bbRepo',
         );
 
         $keys = array_merge(
@@ -83,11 +81,10 @@ class Wp2static_Addon_Bitbucket {
     public function add_post_and_db_keys( $keys ) {
         $keys['bitbucket'] = array(
             'baseUrl-bitbucket',
-            'ghBranch',
-            'ghPath',
-            'ghToken',
-            'ghRepo',
-            'ghCommitMessage',
+            'bbBranch',
+            'bbPath',
+            'bbRepo',
+            'bbToken',
         );
 
         return $keys;
