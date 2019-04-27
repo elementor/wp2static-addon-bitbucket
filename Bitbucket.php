@@ -7,11 +7,10 @@ class WP2Static_BitBucket extends WP2Static_SitePublisher {
           'bitbucket',
           array(
             'baseUrl-bitbucket',
-            'ghBranch',
-            'ghCommitMessage',
-            'ghPath',
-            'ghRepo',
-            'ghToken',
+            'bbBranch',
+            'bbPath',
+            'bbRepo',
+            'bbToken',
           ),
         );
 
@@ -58,8 +57,6 @@ class WP2Static_BitBucket extends WP2Static_SitePublisher {
             echo 'ERROR';
             die(); }
 
-        $this->initiateProgressIndicator();
-
         $batch_size = $this->settings['deployBatchSize'];
 
         if ( $batch_size > $this->files_remaining ) {
@@ -74,9 +71,6 @@ class WP2Static_BitBucket extends WP2Static_SitePublisher {
 
         foreach ( $lines as $line ) {
             $this->addFileToBatchForCommitting( $line );
-
-            // NOTE: progress will indicate file preparation, not the transfer
-            $this->updateProgress();
         }
 
         $this->sendBatchToBitbucket();
